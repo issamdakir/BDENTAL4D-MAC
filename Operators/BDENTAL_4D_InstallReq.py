@@ -23,10 +23,7 @@ def ReqInstall(REQ_ZIP_DIR, BDENTAL_4D_Modules_DIR):
     if listdir(REQ_ZIP_DIR):
         ZipReqFiles = [join(REQ_ZIP_DIR, f) for f in listdir(REQ_ZIP_DIR)]
         for ZipFile in ZipReqFiles:
-            try :
-                shutil.unpack_archive(ZipFile, BDENTAL_4D_Modules_DIR)
-            except Exception :
-                pass
+            shutil.unpack_archive(ZipFile, BDENTAL_4D_Modules_DIR)
 
         print("Requirements installed from ARCHIVE!")
         print("Please Restart Blender")
